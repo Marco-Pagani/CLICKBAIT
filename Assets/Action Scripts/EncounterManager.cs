@@ -16,6 +16,23 @@ public class EncounterManager : MonoBehaviour {
     public Encounter get_encounter (string name) {
         return encounters.get (name);
     }
+
+    public void scramble_meeples (GameObject caller) {
+        var random = new System.Random ();
+        foreach (Transform child in transform)
+            child.gameObject.SetActive (false);
+
+        for (int i = 3; i > 0; i--) {
+            int m = random.Next (transform.childCount);
+            var c = transform.GetChild (m).gameObject;
+            if (c.activeSelf || GameObject.ReferenceEquals(c,caller)) {
+                i++;
+            } else {
+                c.SetActive (true);
+            }
+        }
+
+    }
 }
 
 public class EncounterTable {

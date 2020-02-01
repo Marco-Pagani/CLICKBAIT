@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e14ce875ebc6224b8346e16457302a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: Tana
+  characterName: Generic
   manager: {fileID: 0}
 --- !u!33 &1945259637625411771
 MeshFilter:
