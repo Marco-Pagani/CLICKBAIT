@@ -34,9 +34,10 @@ public class encounter : MonoBehaviour {
     }
 
     private void Interact () {
-        if (is_near){
+        if (is_near && gameObject.activeSelf) {
             var e = manager.get_encounter (characterName);
             Debug.Log (e.prompt);
+            manager.scramble_meeples(gameObject);
         }
     }
 }
