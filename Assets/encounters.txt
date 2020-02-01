@@ -1,4 +1,4 @@
-tana
+Tana
 You are confronted with a choice
 choose the first one
 0 1 0
