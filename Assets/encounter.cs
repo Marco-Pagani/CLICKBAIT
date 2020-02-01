@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class encounter : MonoBehaviour {
-
+    public string characterName = "Tana";
+    public EncounterManager manager;
     bool is_near = false;
     private bool action_pressed = false;
     // Start is called before the first frame update
@@ -33,7 +34,9 @@ public class encounter : MonoBehaviour {
     }
 
     private void Interact () {
-        if (is_near)
-            Debug.Log ("Interact");
+        if (is_near){
+            var e = manager.get_encounter (characterName);
+            Debug.Log (e.prompt);
+        }
     }
 }

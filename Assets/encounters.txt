@@ -1,5 +1,14 @@
-tana
+Tana
 You are confronted with a choice
+choose the first one
+0 1 0
+choose the second one
+1 0 0
+choose the third one
+0 0 -1
+end
+Tana
+ANOTHER CHOICE
 choose the first one
 0 1 0
 choose the second one

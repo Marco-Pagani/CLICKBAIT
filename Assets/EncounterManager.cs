@@ -4,17 +4,17 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-public class encounter_generator : MonoBehaviour {
+public class EncounterManager : MonoBehaviour {
     // Start is called before the first frame update
+    EncounterTable encounters;
     void Start () {
-        var encounters = new EncounterTable ();
+        encounters = new EncounterTable ();
         encounters.load_from_file (Application.dataPath + "/encounters.txt");
 
     }
 
-    // Update is called once per frame
-    void Update () {
-
+    public Encounter get_encounter (string name) {
+        return encounters.get (name);
     }
 }
 
@@ -23,6 +23,20 @@ public class EncounterTable {
 
     public EncounterTable () {
         table = new Dictionary<string, List<Encounter>> ();
+    }
+
+    public Encounter get (string name) {
+        List<Encounter> list;
+
+        if (table.TryGetValue (name, out list)) {
+            var random = new System.Random ();
+            int index = random.Next (list.Count);
+            return list[index];
+        } else {
+            //error
+            return null;
+        }
+
     }
 
     public void load_from_file (string file) {
@@ -58,20 +72,6 @@ public class EncounterTable {
         list.Add (e);
     }
 
-    public Encounter get_encounter (string s) {
-        List<Encounter> list;
-
-        if (table.TryGetValue (s, out list)) {
-            var random = new System.Random ();
-            int index = random.Next (list.Count);
-            return list[index];
-        } else {
-            //error
-            return null;
-        }
-
-    }
-
 }
 
 public class Encounter {
@@ -79,10 +79,10 @@ public class Encounter {
     public List<string> actions;
     public List<int[]> effects;
 
-    public Encounter (string prompt, List<string> actions, List<int[]> effects) {
-        this.prompt = prompt;
-        this.actions = actions;
-        this.effects = effects;
+    public Encounter (string _prompt, List<string> _actions, List<int[]> _effects) {
+        prompt = _prompt;
+        actions = _actions;
+        effects = _effects;
     }
 
 }
