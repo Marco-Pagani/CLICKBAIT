@@ -9,7 +9,7 @@ public class EncounterManager : MonoBehaviour {
     EncounterTable encounters;
     void Start () {
         encounters = new EncounterTable ();
-        encounters.load_from_file (Application.dataPath + "/encounters.txt");
+        encounters.load_from_file (Application.dataPath + "/Encounter Texts/encounters.txt");
 
     }
 

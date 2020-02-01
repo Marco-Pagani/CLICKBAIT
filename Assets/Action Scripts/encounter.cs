@@ -4,37 +4,32 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class encounter : MonoBehaviour {
-    public string characterName = "Tana";
+    public string characterName = "Generic";
+    public int id = 0;
     public EncounterManager manager;
     public GameObject dlWindow;
     bool is_near = false;
     private bool action_pressed = false;
-    // Start is called before the first frame update
-    void Start () {
 
-    }
-
-    // Update is called once per frame
-    void Update () {
-       // if (Input.GetAxis ("Jump") != 0) {
-        if (Input.GetKeyDown(KeyCode.Space) && is_near) {
+    void FixedUpdate () {
+        if (Input.GetAxis ("Jump") != 0 && is_near) {
             if (!action_pressed) {
                 action_pressed = true;
                 Interact ();
-            }
-            if(dlWindow.activeInHierarchy){
-                dlWindow.SetActive(false);
-            }
-            else{
-                dlWindow.SetActive(true);
+                /*
+                if (dlWindow.activeInHierarchy) {
+                    dlWindow.SetActive (false);
+                } else {
+                    dlWindow.SetActive (true);
+                }*/
             }
         } else {
             action_pressed = false;
         }
+
     }
 
     private void OnTriggerEnter (Collider other) {
-        //Debug.Log ("Enter");
         is_near = true;
     }
 
@@ -44,9 +39,11 @@ public class encounter : MonoBehaviour {
 
     private void Interact () {
         if (is_near && gameObject.activeSelf) {
+            Debug.Log (id);
             var e = manager.get_encounter (characterName);
-            //Debug.Log (e.prompt);
-            manager.scramble_meeples(gameObject);
+            Debug.Log (e.prompt);
+            manager.scramble_meeples (gameObject);
+            is_near = false;
         }
     }
 }
