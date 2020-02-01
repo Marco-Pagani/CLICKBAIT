@@ -6,8 +6,9 @@ public class stat_tracker : MonoBehaviour {
 
     public int money, reputation, style, subs;
     public bool viral, drama;
+    public float effect_multiplier = 1.2f;
     int remaining_status = 0;
-    
+
     void Start () {
         money = 80;
         reputation = 10;
@@ -18,11 +19,22 @@ public class stat_tracker : MonoBehaviour {
     }
 
     public void apply_choice (int[] stats) {
+
+        for (int i = 0; i < stats.Length; i++)
+            if ((viral && stats[i] > 0) || (drama && stats[i] < 0))
+                stats[i] = (int) (stats[i] * effect_multiplier);
+
         money += stats[0];
         reputation += stats[1];
         style += stats[2];
         subs += stats[3];
 
+        remaining_status--;
+        if (remaining_status == 0) {
+            viral = false;
+            drama = false;
+        }
+        check_end_states ();
     }
     public void go_viral () {
         viral = true;
@@ -32,6 +44,18 @@ public class stat_tracker : MonoBehaviour {
     public void go_drama () {
         drama = true;
         remaining_status = 4;
+    }
+
+    void check_end_states () {
+        if (money <= 0) {
+
+        } else if (reputation <= 0) {
+
+        } else if (style <= 0) {
+
+        } else if (subs >= 1000) {
+
+        }
     }
 
 }
