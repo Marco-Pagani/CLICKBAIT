@@ -1,27 +1,27 @@
 Generic
 ANOTHER CHOICE
 choose the first one
-0 1 0
+0 1 0 100
 choose the second one
-1 0 0
+1 0 0 100
 choose the third one
-0 0 -1
+0 0 -1 100
 end
 Tana
 You are confronted with a choice
 choose the first one
-0 1 0
+0 1 0 100
 choose the second one
-1 0 0
+1 0 0 100
 choose the third one
-0 0 -1
+0 0 -1 100
 end
 Tana
 ANOTHER CHOICE
 choose the first one
-0 1 0
+0 1 0 100
 choose the second one
-1 0 0
+1 0 0 100
 choose the third one
-0 0 -1
+0 0 -1 100
 end
