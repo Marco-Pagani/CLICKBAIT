@@ -16,12 +16,12 @@ public class encounter : MonoBehaviour {
             if (!action_pressed) {
                 action_pressed = true;
                 Interact ();
-                /*
+                
                 if (dlWindow.activeInHierarchy) {
                     dlWindow.SetActive (false);
                 } else {
                     dlWindow.SetActive (true);
-                }*/
+                }
             }
         } else {
             action_pressed = false;

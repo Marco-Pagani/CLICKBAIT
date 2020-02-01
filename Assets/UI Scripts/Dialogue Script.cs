@@ -6,10 +6,14 @@ using UnityEngine.UI;
 public class DialogueScript : MonoBehaviour
 {
 
-    public GameObject dialogWindow;
+    public GameObject DlWindow;
     public Text dialogText;
     public string dialogue = "Great work, don't get cocky";
     public bool dialogueActive;
+
+    void displayEncounter(Encounter e){
+        
+    }
 
     // Start is called before the first frame update
     void Start()
