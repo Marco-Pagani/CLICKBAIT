@@ -1,54 +1,55 @@
-Beetroot
-ANOTHER CHOICE
-choose the first one
-0 1 0 100
-choose the second one
-1 0 0 100
-choose the third one
-0 0 -1 100
-end
-Sahara
-ANOTHER CHOICE
-choose the first one
-0 1 0 100
-choose the second one
-1 0 0 100
-choose the third one
-0 0 -1 100
-end
 Helix
-ANOTHER CHOICE
-choose the first one
-0 1 0 100
-choose the second one
-1 0 0 100
-choose the third one
-0 0 -1 100
+Yo, I got a Fight Boys tourney coming up and I need someone to make me a promo video to get the crowd hyped.  I'll pay you if it's decent, you in?
+Yeah man! I got tons of FB figures I can use for B-roll. Lemme get your main and I'll make sure to feature them front and center!
+5 2 -3 23
+Uh, sure? Do you want me to film you playing or something? I'll load up jMovie and get a quick edit out with tons of lense flair.
+2 -2 2 12
+Not a chance, my guy. Have you smelled yourself lately?
+0 1 2 0
 end
-Tiana
-ANOTHER CHOICE
-choose the first one
-0 1 0 100
-choose the second one
-1 0 0 100
-choose the third one
-0 0 -1 100
+Beetroot
+Lil BeetROOOT lookin' to spread the word about the next hit sensation! Wanna taste?
+For sure, man! Can't wait to see you hit the charts. Here's a few bucks for that album.
+-3 2 2 14
+Sorry, I don't carry cash on me. Maybe next time?
+0 -2 -2 0
+How bout I feature your music in my next vid and link your SoundStorm in the description?
+4 -3 -2 7
 end
 Problem
-ANOTHER CHOICE
-choose the first one
-0 1 0 100
-choose the second one
-1 0 0 100
-choose the third one
-0 0 -1 100
+Maaaaaaan FUCK you!
+Fuck you too!
+0 -2 0 3 0
+Uh, ok?
+0 2 2 7
+Recorded, idiot. Hope you like 20-minute rants and lots of filler!
+0 5 -1 34
+end
+Helix
+1v1 one me, bro. Rust, no items, any percent.
+No
+0 -3 3 4
+Let's GO, dude. Money-match me right here.
+7 3 -6 54 1
+end
+Sahara
+Heyyyyy, wanna check out my premium Snap? Might even feature you if you're one of my top donors!
+Yeeee, you'll def be seeing more of me. How much for the good shit?
+-6 -3 -3 8 0
+I'll pass. I'm not THAT desperate.
+2 4 2 23
 end
 Spleen
-ANOTHER CHOICE
-choose the first one
-0 1 0 100
-choose the second one
-1 0 0 100
-choose the third one
-0 0 -1 100
+ALIENS!
+Aliens?
+2 2 -2 22
+[Just walk away]
+0 3 4 17
+end
+Tiana
+Hey you've got some nice cheekbones! Want to collab on a tutorial? If you spot me for the supplies I'll give you first upload privileges!
+Let's do it! Always wanted to find out what kind of foundation matched my complexion.
+-4 4 6 41
+Seriously? This video thing goes both ways. How about we go halvsies and we can both upload whenever?
+-2 1 2 31
 end
