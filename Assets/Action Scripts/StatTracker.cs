@@ -5,6 +5,7 @@ using UnityEngine;
 public class StatTracker : MonoBehaviour {
 
     public stat_display display;
+    public GameObject endscreen;
     public int money, reputation, style, subs;
     public bool viral, drama;
     public float effect_multiplier = 1.2f;
@@ -58,19 +59,30 @@ public class StatTracker : MonoBehaviour {
         remaining_status = 4;
     }
     void check_end_states () {
-        string title, results;
+        string title = "", results = "";
+        bool end = false;
         if (money <= 0) {
+            end = true;
             title = "You're broke hun!";
             results = "If you don't have the capital to produce that sweet content, you're not getting clicks, you're not getting sponsors, and you're definitely not hittin a million subs. Maybe keep an eye on that cash flow next time...";
         } else if (reputation <= 0) {
+            end = true;
             title = "You'll never work in this town again!";
             results = "Wow, not a good look. This aint it chief. Yikes. You're demonetized, you're banned from Twitter, and the New York Times is writing editorials about your behavior. Maybe next time think about your actions a little? You are capital cee Cancelled.";
         } else if (style <= 0) {
+            end = true;
             title = "Trash can!!!!";
             results = "Oh dear, you really let yourself go. Money can buy a lot of things but it can't make you conventionally attractive. Well, maybe it can, but you sure didn't use it for that. Maybe be careful who you associate with sweetie, it's not a good look.";
         } else if (subs >= 1000) {
+            end = true;
             title = "PLATINUM!";
             results = "WOW. You guys I am just speechless, I don't know what to say. I never thought I would be in this position and it's honestly just so important to me that you all know how grateful I am for you all (and my sponsors). I am just so lucky you guys omggg.";
+        }
+
+        if (end) {
+            endscreen.SetActive (true);
+            endscreen.GetComponent<Results> ().set_results (title, results, subs);
+            gameObject.GetComponent<CharacterController>().enabled = false;
         }
     }
 }
