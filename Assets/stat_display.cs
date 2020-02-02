@@ -61,7 +61,7 @@ public class stat_display : MonoBehaviour {
             current_stat[3]++;
             sub_obj.GetComponent<UnityEngine.UI.Text> ().color = gain;
         } else if (current_stat[3] > target_stat[3]) {
-            current_stat[3]-= 5;
+            current_stat[3] -= 5;
             sub_obj.GetComponent<UnityEngine.UI.Text> ().color = lose;
         } else {
             sub_obj.GetComponent<UnityEngine.UI.Text> ().color = Color.black;
@@ -71,9 +71,11 @@ public class stat_display : MonoBehaviour {
         p_obj.GetComponent<RectTransform> ().sizeDelta = new Vector2 (((float) current_stat[1]).Remap (0, 100, 25, 760), 36);
         s_obj.GetComponent<RectTransform> ().sizeDelta = new Vector2 (((float) current_stat[2]).Remap (0, 100, 25, 760), 36);
         if (current_stat[3] <= 0)
-        sub_obj.GetComponent<UnityEngine.UI.Text> ().text = "Sub Count:\n0";
+            sub_obj.GetComponent<UnityEngine.UI.Text> ().text = "Sub Count:\n0";
+        else if (current_stat[3] >= 1000)
+            sub_obj.GetComponent<UnityEngine.UI.Text> ().text = "Sub Count:\n1,000,000!!!";
         else
-        sub_obj.GetComponent<UnityEngine.UI.Text> ().text = "Sub Count:\n" + current_stat[3] + ",000";
+            sub_obj.GetComponent<UnityEngine.UI.Text> ().text = "Sub Count:\n" + current_stat[3] + ",000";
     }
 
     public void update_stats (int[] update) {
