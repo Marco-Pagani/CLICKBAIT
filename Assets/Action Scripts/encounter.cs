@@ -7,6 +7,7 @@ public class encounter : MonoBehaviour {
     public string characterName = "Generic";
     public EncounterManager manager;
     public GameObject dlWindow;
+    public Animator anim;
     bool is_near = false;
     private bool action_pressed = false;
 
@@ -40,6 +41,18 @@ public class encounter : MonoBehaviour {
             } else {
                 dlWindow.SetActive (true);
                 dlWindow.GetComponent<DialogueScript> ().displayEncounter (e);
+                //anim = GetComponent<Animator>();
+                //anim.Play("zoom_i01");
+                //Button[] buttons = GetComponentsInChildren<Button>
+                //GameObject currentButton = null;
+                /*
+                for (int i = 0; i < 3; i++){
+                    //button = dlWindow.
+                    currentButton = gameObject.transform.Find("button" + i);
+                    currentButton.GetComponent<Animator>().Play();
+                }
+                */
+                
             }
             //Debug.Log (e.prompt);
 
