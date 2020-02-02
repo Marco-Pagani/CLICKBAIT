@@ -1,4 +1,4 @@
-Generic
+Beetroot
 ANOTHER CHOICE
 choose the first one
 0 1 0 100
@@ -7,8 +7,8 @@ choose the second one
 choose the third one
 0 0 -1 100
 end
-Tana
-You are confronted with a choice
+Sahara
+ANOTHER CHOICE
 choose the first one
 0 1 0 100
 choose the second one
@@ -16,7 +16,34 @@ choose the second one
 choose the third one
 0 0 -1 100
 end
-Tana
+Helix
+ANOTHER CHOICE
+choose the first one
+0 1 0 100
+choose the second one
+1 0 0 100
+choose the third one
+0 0 -1 100
+end
+Tiana
+ANOTHER CHOICE
+choose the first one
+0 1 0 100
+choose the second one
+1 0 0 100
+choose the third one
+0 0 -1 100
+end
+Problem
+ANOTHER CHOICE
+choose the first one
+0 1 0 100
+choose the second one
+1 0 0 100
+choose the third one
+0 0 -1 100
+end
+Spleen
 ANOTHER CHOICE
 choose the first one
 0 1 0 100

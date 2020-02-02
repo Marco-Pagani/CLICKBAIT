@@ -25,13 +25,29 @@ public class EncounterManager : MonoBehaviour {
         for (int i = 3; i > 0; i--) {
             int m = random.Next (transform.childCount);
             var c = transform.GetChild (m).gameObject;
-            if (c.activeSelf || GameObject.ReferenceEquals(c,caller)) {
+            if (c.activeSelf || GameObject.ReferenceEquals (c, caller)) {
                 i++;
             } else {
                 c.SetActive (true);
             }
         }
 
+    }
+
+    public void scramble_meeples () {
+        var random = new System.Random ();
+        foreach (Transform child in transform)
+            child.gameObject.SetActive (false);
+
+        for (int i = 3; i > 0; i--) {
+            int m = random.Next (transform.childCount);
+            var c = transform.GetChild (m).gameObject;
+            if (c.activeSelf) {
+                i++;
+            } else {
+                c.SetActive (true);
+            }
+        }
     }
 }
 
@@ -72,7 +88,7 @@ public class EncounterTable {
                 choices.Add (next);
                 effects.Add (Array.ConvertAll (sr.ReadLine ().Split (' '), s => int.Parse (s)));
             }
-            add (key, new Encounter (prompt, choices, effects));
+            add (key, new Encounter (key, prompt, choices, effects));
 
         }
         Debug.Log ("Successfully loaded encounters");
@@ -92,11 +108,13 @@ public class EncounterTable {
 }
 
 public class Encounter {
+    public string name;
     public string prompt;
     public List<string> actions;
     public List<int[]> effects;
 
-    public Encounter (string _prompt, List<string> _actions, List<int[]> _effects) {
+    public Encounter (string _name, string _prompt, List<string> _actions, List<int[]> _effects) {
+        name = _name;
         prompt = _prompt;
         actions = _actions;
         effects = _effects;

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class encounter : MonoBehaviour {
     public string characterName = "Generic";
-    public int id = 0;
     public EncounterManager manager;
     public GameObject dlWindow;
     bool is_near = false;
@@ -16,12 +15,6 @@ public class encounter : MonoBehaviour {
             if (!action_pressed) {
                 action_pressed = true;
                 Interact ();
-                
-                if (dlWindow.activeInHierarchy) {
-                    dlWindow.SetActive (false);
-                } else {
-                    dlWindow.SetActive (true);
-                }
             }
         } else {
             action_pressed = false;
@@ -30,6 +23,7 @@ public class encounter : MonoBehaviour {
     }
 
     private void OnTriggerEnter (Collider other) {
+        //Debug.Log ("Near");
         is_near = true;
     }
 
@@ -39,11 +33,19 @@ public class encounter : MonoBehaviour {
 
     private void Interact () {
         if (is_near && gameObject.activeSelf) {
-            Debug.Log (id);
             var e = manager.get_encounter (characterName);
-            Debug.Log (e.prompt);
-            manager.scramble_meeples (gameObject);
+            if (dlWindow.activeInHierarchy) {
+                dlWindow.SetActive (false);
+            } else {
+                dlWindow.SetActive (true);
+                dlWindow.GetComponent<DialogueScript> ().displayEncounter (e);
+            }
+            //Debug.Log (e.prompt);
+
             is_near = false;
+        } else {
+            //Debug.Log ("No Encounter");
         }
+
     }
 }
