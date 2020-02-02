@@ -25,6 +25,12 @@ public class stat_display : MonoBehaviour {
         sub_obj = gameObject.transform.Find ("Subcount").gameObject;
     }
     void Update () {
+          if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+
+
         if (current_stat[0] < target_stat[0]) {
             //Debug.Log ("Current " + current_stat[0] + " Target " + target_stat[0]);
             current_stat[0]++;

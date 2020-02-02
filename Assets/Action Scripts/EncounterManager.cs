@@ -9,8 +9,8 @@ public class EncounterManager : MonoBehaviour {
     EncounterTable encounters;
     void Start () {
         encounters = new EncounterTable ();
-        encounters.load_from_file (Application.dataPath + "/Encounter Texts/encounters.txt"); //EDITOR
-        //encounters.load_from_file (Application.dataPath +"/../encounters.txt");   //BUILD
+        //encounters.load_from_file (Application.dataPath + "/Encounter Texts/encounters.txt"); //EDITOR
+        encounters.load_from_file (Application.dataPath +"/../encounters.txt");   //BUILD
     }
 
     public Encounter get_encounter (string name) {

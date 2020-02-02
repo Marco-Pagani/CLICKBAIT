@@ -61,8 +61,6 @@ Latest Gen
 0 -3 -2 10
 All the new stuff sucks!
 0 -4 -1 -20
-Sorry, I don’t care.
-0 -4 0 -15
 end
 Problem
 Awwww yeah buddy, you and I are going to do a video right now! My girlfriend is over there and I wanted to prank her. I’m going to pretend I’m going to break up with her! It’ll be gold. So here’s the plan...
@@ -81,8 +79,6 @@ DON’T CALL THE GAMEDEV’S AT 3AM!!! (I lost all of my progress on my project?
 0 3 -2 -10
 Run my 50 Lamborghinis into the River Challenge
 -5 -4 5 20
-New Diss Track against Tiana Fondue (ft. Hatsune Miku)
--3 5 4 40
 end
 Tiana
 I’m not liking the quality of this palette I got from my sponsor. This is ridiculous! I need to do something...
@@ -99,8 +95,6 @@ Obviously : MOODY VIBES - MISS YOU (FT. JUICY FEET)
 0 0 2 20
 Obviously :  [P a n o r a m i c  G a r b a g e C a n ]
 0 1 4 10
-Obviously : [ Expletive ]
-0 -4 1 30
 We don’t need a name, the EP speaks for itself.
 0 0 5 40
 end

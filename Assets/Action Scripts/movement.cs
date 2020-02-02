@@ -14,7 +14,11 @@ public class movement : MonoBehaviour {
         moveDirection *= speed;
         controller.Move (moveDirection * Time.deltaTime);
 
-        
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+
     }
 
 }
