@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class StatTracker : MonoBehaviour {
 
+    public stat_display display;
     public int money, reputation, style, subs;
     public bool viral, drama;
     public float effect_multiplier = 1.2f;
@@ -13,13 +14,16 @@ public class StatTracker : MonoBehaviour {
         money = 80;
         reputation = 10;
         style = 20;
-        subs = 0;
+        subs = 1;
         viral = false;
         drama = false;
+
+         int[] display_stats = new int[] { money, reputation, style, subs };
+        display.update_stats (display_stats);
     }
 
     public void apply_choice (int[] stats) {
-         for (int i = 0; i < stats.Length; i++)
+        for (int i = 0; i < stats.Length; i++)
             if ((viral && stats[i] > 0) || (drama && stats[i] < 0))
                 stats[i] = (int) (stats[i] * effect_multiplier);
 
@@ -40,8 +44,9 @@ public class StatTracker : MonoBehaviour {
                 go_drama ();
 
         }
-
-        check_end_states();
+        int[] display_stats = new int[] { money, reputation, style, subs };
+        display.update_stats (display_stats);
+        check_end_states ();
     }
     public void go_viral () {
         viral = true;
@@ -52,7 +57,7 @@ public class StatTracker : MonoBehaviour {
         drama = true;
         remaining_status = 4;
     }
- void check_end_states () {
+    void check_end_states () {
         if (money <= 0) {
 
         } else if (reputation <= 0) {
