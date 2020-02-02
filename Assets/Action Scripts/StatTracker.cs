@@ -14,7 +14,7 @@ public class StatTracker : MonoBehaviour {
         money = 80;
         reputation = 10;
         style = 20;
-        subs = 1;
+        subs = 0;
         viral = false;
         drama = false;
 
