@@ -15,7 +15,6 @@ public class encounter : MonoBehaviour {
             if (!action_pressed) {
                 action_pressed = true;
                 Interact ();
-
             }
         } else {
             action_pressed = false;
