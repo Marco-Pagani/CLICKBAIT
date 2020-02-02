@@ -28,10 +28,10 @@ public class StatTracker : MonoBehaviour {
             if ((viral && stats[i] > 0) || (drama && stats[i] < 0))
                 stats[i] = (int) (stats[i] * effect_multiplier);
 
-        money += stats[0];
-        reputation += stats[1];
-        style += stats[2];
-        subs += stats[3];
+        money += (int)(stats[0] * 1.3);
+        reputation += (int)(stats[1]* 1.3);
+        style += (int)(stats[2]* 1.3);
+        subs += (int)(stats[3]* 1.3);
 
         remaining_status--;
         if (remaining_status == 0) {
