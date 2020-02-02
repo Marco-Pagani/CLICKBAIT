@@ -25,6 +25,7 @@ public class DialogueScript : MonoBehaviour {
         switch (Array.IndexOf (names, e.name)) {
             case 0:
                 active = s0;
+                //active.RectTransform.Scale.X = 3;
                 break;
             case 1:
                 active = s1;
