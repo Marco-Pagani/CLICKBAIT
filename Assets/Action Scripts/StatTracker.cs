@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class stat_tracker : MonoBehaviour {
+public class StatTracker : MonoBehaviour {
 
     public int money, reputation, style, subs;
     public bool viral, drama;
     int remaining_status = 0;
-    
+
     void Start () {
         money = 80;
         reputation = 10;
@@ -22,6 +22,14 @@ public class stat_tracker : MonoBehaviour {
         reputation += stats[1];
         style += stats[2];
         subs += stats[3];
+
+        if (stats.Length == 5) {
+            if (stats[4] == 1)
+                go_viral ();
+            else
+                go_drama ();
+
+        }
 
     }
     public void go_viral () {
