@@ -10,6 +10,6 @@ This game was made for the Global Game Jam 2020, and is in ongoing development t
 ## How to Build
 
 ## Credits
-Marco Pagani - Programming, Project Management
-Hunter Nelson - 3D Modelling, UI Design & Implementation
-Rosa Cortez - Art, Design, and Encounter Design
+- Marco Pagani - Programming, Project Management
+- Hunter Nelson - 3D Modelling, UI Design & Implementation
+- Rosa Cortez - Art, Design, and Encounter Design
